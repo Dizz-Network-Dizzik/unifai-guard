@@ -1,0 +1,21 @@
+{
+  "erhoben": "2026-09-08",
+  "quelle": "UnifAI public search API, 50 queries, union",
+  "actions": 183,
+  "toolkits": 45,
+  "description_felder": 811,
+  "ohne_befund": 157,
+  "nach_schwere": {
+    "LOW": 15,
+    "MEDIUM": 11
+  },
+  "nach_detektor": {
+    "hardcoded_address": 24,
+    "call_direction": 4,
+    "url": 12,
+    "action_like_name": 2,
+    "hex_blob": 1
+  },
+  "ab_high": 0,
+  "hinweis": "Toolkit-Namen sind hier bewusst nicht enthalten. Ein Fund in einem fremden, veroeffentlichten Toolkit geht privat an UnifAI, nicht in ein oeffentliches Issue."
+}

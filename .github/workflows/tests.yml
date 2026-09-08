@@ -1,0 +1,49 @@
+name: tests
+
+# unifai-guard has no dependencies. Nothing is installed from an index here on
+# purpose: if this workflow ever needs a pip install, the zero-dependency claim
+# in the README has quietly stopped being true and this file should fail loudly.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    name: python ${{ matrix.python-version }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: No third-party packages are installed
+        run: |
+          python -c "import sys; print(sys.version)"
+          python -m pip list
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Quickstart runs end to end
+        run: python examples/quickstart.py
+
+      - name: Package imports from a clean interpreter
+        run: |
+          python -c "import unifai_guard, sys; \
+            print('unifai-guard', unifai_guard.__version__); \
+            missing = [m for m in unifai_guard.__all__ if not hasattr(unifai_guard, m)]; \
+            sys.exit('missing exports: %s' % missing) if missing else None"
