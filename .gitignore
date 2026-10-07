@@ -6,3 +6,15 @@ __pycache__/
 build/
 dist/
 *.jsonl
+
+# test and editor leftovers
+.pytest_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+
+# local secrets never belong here
+.env
+.env.*
+!.env.example

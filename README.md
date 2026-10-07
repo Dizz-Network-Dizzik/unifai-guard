@@ -373,11 +373,13 @@ package is not it.
 
 ## Disclosure
 
-**The author holds UAI.** This package is offered because it is missing and
-because the author uses the network; the holding is a reason to disclose, not a
-reason to withhold the work. Judge the code, and discount the enthusiasm
-accordingly.
+The author holds UAI (as of 2026-10-08). The holding is a reason to disclose,
+not a reason to withhold the work. Nothing here is investment advice.
 
 ## License
 
-Apache-2.0.
+Licensed under the Apache License, Version 2.0 — see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+The capture in `messung_2026-09-08/` contains data returned by the UnifAI public search API,
+including descriptions written by third-party toolkit authors. It is included for verification
+only and is not covered by this repository's license; rights remain with their authors.
