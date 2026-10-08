@@ -373,7 +373,8 @@ package is not it.
 
 ## Disclosure
 
-The author holds UAI (as of 2026-10-08). The holding is a reason to disclose,
+The author holds UAI and has received no payment, tokens or other consideration
+from UnifAI for this work (as of 2026-10-08). The holding is a reason to disclose,
 not a reason to withhold the work. Nothing here is investment advice.
 
 ## License
